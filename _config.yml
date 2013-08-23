@@ -1,4 +1,5 @@
 name: My New Jekyll Site
 markdown: redcarpet
 pygments: true
+permalink: /:categories/:title/
 exclude: [less, Gruntfile.js, package.json, serve.js, node_modules]
