@@ -3,6 +3,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-connect');
 
   grunt.initConfig({
     watch: {
@@ -47,12 +48,20 @@ module.exports = function(grunt) {
         "css/main.css": "less/main.less"
       }
     }
+  },
+  connect: {
+    server: {
+      options: {
+        port: 3000,
+        base: './_site'
+      }
+    }
   }
 
   });
   // less watch
   grunt.registerTask('lessCopy', ['less:development', 'copy:css']);
   // Default task.
-  grunt.registerTask('default', 'watch');
+  grunt.registerTask('default', ['shell:jekyll', 'connect', 'watch']);
 
 };
