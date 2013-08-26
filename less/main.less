@@ -1,3 +1,10 @@
+@bg-off-white: #ece9e2;
+
+
+@link-norm: #9b59b6;
+@link-hover: #752B94;
+
+
 /*****************************************************************************/
 /*
 /* Common
@@ -13,8 +20,8 @@
 html, body { height: 100%; }
 
 body {
-  background-color: #FFF;
-  font: 13.34px Helvetica, Arial, sans-serif;
+  background-color: @bg-off-white;
+  font-family: 'Open Sans', sans-serif;
   font-size: small;
   text-align: center;
 }
@@ -25,9 +32,10 @@ h1, h2, h3, h4, h5, h6 {
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
 
-a         { color: #00a; }
-a:hover   { color: #000; }
-a:visited { color: #a0a; }
+a         { color: @link-norm; }
+a:hover   { color: @link-hover; }
+a:visited { color: @link-norm; }
+a:visited:hover { color: @link-hover; }
 
 /*****************************************************************************/
 /*
@@ -45,8 +53,12 @@ ul.posts li {
 
 ul.posts span {
   color: #aaa;
-  font-family: Monaco, "Courier New", monospace;
+  font-family: 'Open Sans', sans-serif;
   font-size: 80%;
+}
+
+a {
+  font-family: 'Open Sans', sans-serif;
 }
 
 /*****************************************************************************/
@@ -74,7 +86,8 @@ ul.posts span {
 }
 
 .site .header h1.title a {
-  color: #a00;
+  font-size: 150%;
+  color: #914FAC;
 }
 
 .site .header h1.title a:hover {
@@ -97,7 +110,7 @@ ul.posts span {
 .site .footer {
   font-size: 80%;
   color: #666;
-  border-top: 4px solid #eee;
+  border-top: 2px solid #B379CB;
   margin-top: 2em;
   overflow: hidden;
 }
