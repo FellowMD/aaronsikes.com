@@ -18,7 +18,8 @@ module.exports = function(grunt) {
           // capture all except css - add your own
           '*.html', '*.yml', 'js/**.js',
           '_posts/**', '_includes/**',
-          '_layouts/**', '_drafts/**'
+          '_layouts/**', '_drafts/**',
+          'apps/**'
 
           ],
         tasks: 'shell:jekyll',
