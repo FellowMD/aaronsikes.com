@@ -18,7 +18,7 @@ module.exports = function(grunt) {
           // capture all except css - add your own
           '*.html', '*.yml', 'js/**.js',
           '_posts/**', '_includes/**',
-          '_layouts/**'
+          '_layouts/**', '_drafts/**'
 
           ],
         tasks: 'shell:jekyll',
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
     },
   shell: {
       jekyll: {
-          command: 'rm -rf _site/*; jekyll build',
+          command: 'rm -rf _site/*; jekyll build --drafts',
           stdout: true
       }
   },
