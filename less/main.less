@@ -1,8 +1,15 @@
-@bg-off-white: #ece9e2;
+@light-bg: #ece9e2;
+@dark-bg: #82746b;
+
+@light-text: #F5EFE0;
+@dark-text: #4E433C;
 
 
 @link-norm: #9b59b6;
 @link-hover: #752B94;
+
+@hr-color: #B379CB;
+@footer-color: #82746b;
 
 
 /*****************************************************************************/
@@ -20,7 +27,7 @@
 html, body { height: 100%; }
 
 body {
-  background-color: @bg-off-white;
+  background-color: @light-bg;
   font-family: 'Open Sans', sans-serif;
   font-size: small;
   text-align: center;
@@ -49,6 +56,27 @@ ul.posts {
 
 ul.posts li {
   line-height: 1.75em;
+}
+
+ul.posts li::after {
+  content: " ";
+  display: block;
+  left:0;
+  right: 0;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: .75em;
+  max-width: 400px;
+
+  border-width: 0;
+  border-top-width: 1px;
+  border-style: solid;
+  border-color: @hr-color;
+}
+
+ul.posts li:last-child::after {
+  content: "";
+  display: none;
 }
 
 ul.posts span {
@@ -110,7 +138,7 @@ a {
 .site .footer {
   font-size: 80%;
   color: #666;
-  border-top: 2px solid #B379CB;
+  border-top: 2px solid @hr-color;
   margin-top: 2em;
   overflow: hidden;
 }
