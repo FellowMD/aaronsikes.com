@@ -13,6 +13,10 @@ module.exports = function(grunt) {
         files: ['less/*.less'],
         tasks: 'lessCopy'
       },
+      css: {
+        files: ['css/**'],
+        tasks: 'copy:css'
+      },
       jekyllSources: {
         files: [
           // capture all except css - add your own
@@ -27,11 +31,14 @@ module.exports = function(grunt) {
     },
     copy: {
       css : {
-        files: {
+        files: [{
           // Copy the less-generated style file to
           // the _site/ folder
-          '_site/css/main.css': 'css/main.css'
-        }
+          expand: true,
+          cwd: 'css/',
+          src:  '**',
+          dest: '_site/css/'
+        }]
       }
     },
   shell: {
