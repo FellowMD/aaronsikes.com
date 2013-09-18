@@ -19,14 +19,16 @@ module.exports = function(grunt) {
       },
       jekyllSources: {
         files: [
-          // capture all except css - add your own
-          '*.html', '*.yml', 'js/**.js',
-          '_posts/**', '_includes/**',
-          '_layouts/**', '_drafts/**',
-          'apps/**'
-
+          'index.html', '_config.yml', 'package.json',
+          'js/**', 'img/**',
+          '_includes/**', '_layouts/**',
+          '_posts/**', '_drafts/**',
+          'blog/**', 'projects/**', 'apps/**', 'ideas/**', 'about/**'
           ],
         tasks: 'shell:jekyll',
+        options: {
+          interrupt: true
+        }
       }
     },
     copy: {

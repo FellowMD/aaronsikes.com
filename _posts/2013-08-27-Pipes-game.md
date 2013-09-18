@@ -2,7 +2,8 @@
 layout: post
 title:  Pipes game
 date:   2013-08-27
-categories: project
+categories: projects
+preview-image: pipes.png
 ---
 
 [PIPES!!](/apps/pipes/)

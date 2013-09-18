@@ -1,0 +1,14 @@
+<li class="post-preview">
+	<div class="post-preview-aside">
+		<div class="post-preview-date">
+			{{ post.date | date: "%b %d, %Y" }}
+		</div>
+	</div>
+	<h2 class="post-preview-title">
+		<a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
+	</h2>
+	<div class="post-preview-main">
+		<p> {{ post.excerpt }}
+	</div>
+	<div class="clear"></div>
+</li>

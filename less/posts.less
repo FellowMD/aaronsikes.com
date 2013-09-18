@@ -1,0 +1,71 @@
+ul.posts {
+  list-style-type: none;
+  margin-bottom: 2em;
+}
+
+ul.posts li {
+  line-height: 1.75em;
+  position: relative;
+  margin-bottom: 2em;
+}
+
+.post-title {
+  text-decoration: none;
+  color: @dark-text;
+}
+
+.post-title:hover {
+  color: @link-hover;
+}
+
+.post-title:visited {
+  color: @dark-text;
+}
+.post-title:visited:hover {
+  color: @link-hover;
+}
+
+.preview-main {
+  margin-left: 25%;
+  margin-bottom: 2em;
+}
+
+.preview-aside {
+  float: left;
+  width: 20%;
+  margin: 0;
+
+  text-align: left;
+  color: @aside-text;
+}
+
+ul.posts li::after {
+  content: " ";
+  display: block;
+  left:0;
+  right: 0;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: .75em;
+  width: 60%;
+
+  border-width: 0;
+  border-top-width: 1px;
+  border-style: solid;
+  border-color: @hr-color;
+}
+
+.post-title {
+  text-transform: capitalize;
+}
+
+ul.posts li:last-child::after {
+  content: "";
+  display: none;
+}
+
+ul.posts span {
+  color: #aaa;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 80%;
+}
