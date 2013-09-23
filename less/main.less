@@ -30,8 +30,14 @@
 
 html, body { height: 100%; }
 
+html {
+  background: url(/img/ricepaper2.png) fixed;
+}
+
 body {
-  background-color: @light-bg;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-color: fade(@light-bg, 50%);
   font-family: 'Open Sans', sans-serif;
   font-size: small;
   text-align: center;
