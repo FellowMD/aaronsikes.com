@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script>
+        var here = window.location.href;
+        var there = here.replace(/fellowmd\.github\.io\//i, '');
+        if (here !== there) window.location = there;
+        </script>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>{{ page.title }}</title>
