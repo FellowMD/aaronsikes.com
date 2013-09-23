@@ -45,6 +45,10 @@ module.exports = function(grunt) {
     },
   shell: {
       jekyll: {
+          command: 'rm -rf _site/*; jekyll build',
+          stdout: true
+      },
+      jekyll_drafts: {
           command: 'rm -rf _site/*; jekyll build --drafts',
           stdout: true
       }
@@ -63,7 +67,8 @@ module.exports = function(grunt) {
     server: {
       options: {
         port: 3000,
-        base: './_site'
+        base: './_site',
+        keepalive: true
       }
     }
   }
@@ -71,6 +76,7 @@ module.exports = function(grunt) {
   });
   // less watch
   grunt.registerTask('lessCopy', ['less:development', 'copy:css']);
+  grunt.registerTask('draft', ['shell:jekyll_drafts', 'connect'] );
   // Default task.
   grunt.registerTask('default', ['shell:jekyll', 'connect', 'watch']);
 
