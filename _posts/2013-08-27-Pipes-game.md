@@ -1,7 +1,6 @@
 ---
 layout: post
-title:  Pipes game
-date:   2013-08-27
+title:  Addictive Plumbing
 categories: projects
 preview-image: pipes.png
 ---

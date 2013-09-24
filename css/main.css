@@ -20,16 +20,15 @@ ul.posts li {
 .post-title:visited:hover {
   color: #752b94;
 }
-.preview-main {
-  margin-left: 25%;
-  margin-bottom: 2em;
-}
-.preview-aside {
+.post-preview-aside {
   float: left;
   width: 20%;
   margin: 0;
   text-align: left;
   color: #888888;
+}
+.post-preview-title {
+  font-size: 1.25em;
 }
 ul.posts li::after {
   content: " ";
@@ -57,6 +56,17 @@ ul.posts span {
   font-family: 'Open Sans', sans-serif;
   font-size: 80%;
 }
+.project-preview {
+  width: 30%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  text-align: center;
+}
+.project-thumbnail img {
+  max-width: 228px;
+  width: 100%;
+}
 /*****************************************************************************/
 /*
 /* Common
@@ -66,6 +76,13 @@ ul.posts span {
 * {
   margin: 0;
   padding: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 html,
 body {
