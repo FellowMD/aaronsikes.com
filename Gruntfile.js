@@ -76,7 +76,7 @@ module.exports = function(grunt) {
   // less watch
   grunt.registerTask('lessCopy', ['less:development', 'copy:css']);
 
-  grunt.registerTask('drafts', ['shell:jekyll_drafts', 'connect:keepalive'] );
+  grunt.registerTask('drafts', ['shell:jekyll_drafts', 'connect:server:keepalive'] );
   grunt.registerTask('draft', 'drafts' );
   // Default task.
   grunt.registerTask('default', ['shell:jekyll', 'connect', 'watch']);
